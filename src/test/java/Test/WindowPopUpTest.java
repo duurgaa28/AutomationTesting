@@ -5,6 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -22,7 +23,7 @@ WindowPopUpPage windowPopUpPage;
 
 @BeforeTest 
 @Parameters({"browser"})
-public void setUp(String browser) throws Exception {
+public void setUp(@Optional("chrome") String browser) throws Exception {
 	driver=super.driveInitialize(browser);
 }
 @Test

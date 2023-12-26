@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import util.WindowHandleUtil;
+
 public class WindowPopUpPage {
 WebDriver driver;
 @FindBy(xpath="//a[@class='btn btn-primary windowSingle']")
@@ -21,15 +23,7 @@ public WindowPopUpPage (WebDriver driver) {
 }
 public void facebookBtnClick() {
 	facebookButton.click();
-	String parentWindow = driver.getWindowHandle();
-	Set<String> WindowHandlesss = driver.getWindowHandles();
-	Iterator<String> iterator = WindowHandlesss.iterator();
-	while (iterator.hasNext()) {
-		String childWindow = iterator.next();
-		if (!parentWindow.equals(childWindow)) {
-			driver.switchTo().window(childWindow);
-		}
-}
+	WindowHandleUtil.windowHandle(driver);
 }
 	public  String getTitles() {
 		return title.getText();

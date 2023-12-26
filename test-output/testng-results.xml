@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-26T20:48:16 IST" name="Default suite" finished-at="2023-12-26T20:48:28 IST" duration-ms="12057">
+  <suite started-at="2023-12-27T01:41:23 IST" name="Default suite" finished-at="2023-12-27T01:41:41 IST" duration-ms="18348">
     <groups>
     </groups>
-    <test started-at="2023-12-26T20:48:16 IST" name="Default test" finished-at="2023-12-26T20:48:28 IST" duration-ms="12057">
-      <class name="Test.TableTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.TableTest@58cbafc2]" started-at="2023-12-26T20:48:16 IST" name="setUp" finished-at="2023-12-26T20:48:21 IST" duration-ms="4360" status="PASS">
+    <test started-at="2023-12-27T01:41:23 IST" name="Default test" finished-at="2023-12-27T01:41:41 IST" duration-ms="18348">
+      <class name="Test.WindowPopUpTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.WindowPopUpTest@58cbafc2]" started-at="2023-12-27T01:41:23 IST" name="setUp" finished-at="2023-12-27T01:41:26 IST" duration-ms="2929" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="tableVerify()[pri:0, instance:Test.TableTest@58cbafc2]" started-at="2023-12-26T20:48:21 IST" name="tableVerify" finished-at="2023-12-26T20:48:28 IST" duration-ms="6807" status="PASS">
+        <test-method signature="windowPopUp()[pri:0, instance:Test.WindowPopUpTest@58cbafc2]" started-at="2023-12-27T01:41:26 IST" name="windowPopUp" finished-at="2023-12-27T01:41:41 IST" duration-ms="14944" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tableVerify -->
-        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.TableTest@58cbafc2]" started-at="2023-12-26T20:48:28 IST" name="closeTest" finished-at="2023-12-26T20:48:28 IST" duration-ms="800" status="PASS">
+        </test-method> <!-- windowPopUp -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.WindowPopUpTest@58cbafc2]" started-at="2023-12-27T01:41:41 IST" name="closeTest" finished-at="2023-12-27T01:41:41 IST" duration-ms="425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeTest -->
-      </class> <!-- Test.TableTest -->
+      </class> <!-- Test.WindowPopUpTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

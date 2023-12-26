@@ -1,9 +1,16 @@
 package page;
 
+import java.io.IOException;
+
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
+
+import util.PropertyRead;
+import util.ScreenShotClass;
 
 public class JsAlertPage {
 WebDriver driver;
@@ -28,7 +35,18 @@ public void jsConfirmClick() {
 }
 public void jsPromptClick() {
 	jsPromptBox.click();
-	
+}
+public void alertSet(String propertyName) throws Exception {
+	try {
+		Alert jsalert = driver.switchTo().alert();
+		Assert.assertEquals(jsalert.getText().trim(),"Please enter your name");
+		String name=PropertyRead.getProperty(propertyName,"Not found");
+		jsalert.sendKeys(name);
+		//Assert.assertEquals(jsAlertPage.getTheEntered().trim(),"You have entered"+name);
+		
+		}
+		catch(NoAlertPresentException e) {
+		}
 }
 public String getTheEntered() {
 	return youEntered.getText();

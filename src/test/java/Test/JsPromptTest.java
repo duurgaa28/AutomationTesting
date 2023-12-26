@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -30,7 +31,7 @@ JsAlertPage jsAlertPage;
 
 @BeforeTest
 @Parameters({"browser"})
-public void setUp(String browser)throws Exception {
+public void setUp(@Optional("chrome") String browser)throws Exception {
 	driver=super.driveInitialize(browser);
 	
 }
@@ -44,16 +45,8 @@ public void jsPrompt() throws Exception {
 	alertsAndModalsPage.jsAlert();
 	jsAlertPage=PageFactory.initElements(driver, JsAlertPage.class);
 	jsAlertPage.jsPromptClick();
-	try {
-	Alert jsalert = driver.switchTo().alert();
-	Assert.assertEquals(jsalert.getText().trim(),"Please enter your name");
-	String name=PropertyRead.getProperty("Enter Your Name","Not found");
-	jsalert.sendKeys(name);
-	//Assert.assertEquals(jsAlertPage.getTheEntered().trim(),"You have entered"+name);
+	jsAlertPage.alertSet("Enter_Your_Name");
 	ScreenShotClass.takeScreenshot("JsPrompt.png", driver);
-	}
-	catch(NoAlertPresentException e) {
-	}
 	}
 @AfterTest
 public void closeTest() {

@@ -40,9 +40,9 @@ public class AjaxFormTest  extends DriveIntiation{
 	 sideInputPage=PageFactory.initElements(driver, SideInputPage.class);
 	 sideInputPage.sideAjaxForm();
 	 ajaxFormPage=PageFactory.initElements(driver, AjaxFormPage.class);
-	 String subjectTexts=PropertyRead.getProperty("Enter Subject", "Not found");
+	 String subjectTexts=PropertyRead.getProperty("EnterSubject", "Not found");
 	 ajaxFormPage.subjectInput(subjectTexts);
-	 String descriptionTexts=PropertyRead.getProperty("Enter Description", "Not found");
+	 String descriptionTexts=PropertyRead.getProperty("EnterDescription", "Not found");
 	 ajaxFormPage.descriptionInput(descriptionTexts);
 	 ajaxFormPage.submitClick();
 	 Assert.assertEquals(ajaxFormPage.theMessage(), "Form has been submitted successfully!");
