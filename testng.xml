@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Framework1Suite">
+  <test  name="Test" parallel="classes" thread-count="2">
+  <parameter name="browser" value="chrome">
+  </parameter>
+  <classes>
+<class name="Test.InputTest">
+</class>
+<class name="Test.SimpleFormTest">
+</class>
+<class name="Test.AjaxFormTest">
+</class>
+<class name="Test.CheckBoxTest">
+</class>
+</classes>
+  </test> 
+</suite> 
+

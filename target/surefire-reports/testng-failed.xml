@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Framework1Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" parallel="classes" name="Test(failed)" verbose="0">
+    <classes>
+      <class name="Test.AjaxFormTest">
+        <parameter name="browser" value="chrome"/>
+        <methods>
+          <include name="ajaxFormTest"/>
+          <include name="closeTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Test.AjaxFormTest -->
+      <class name="Test.SimpleFormTest">
+        <parameter name="browser" value="chrome"/>
+        <methods>
+          <include name="closeTest"/>
+          <include name="simpleFormTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Test.SimpleFormTest -->
+      <class name="Test.CheckBoxTest">
+        <parameter name="browser" value="chrome"/>
+        <methods>
+          <include name="checkBoxTest"/>
+          <include name="closeTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Test.CheckBoxTest -->
+      <class name="Test.InputTest">
+        <parameter name="browser" value="chrome"/>
+        <methods>
+          <include name="setUp"/>
+          <include name="closeTest"/>
+          <include name="inputTest"/>
+        </methods>
+      </class> <!-- Test.InputTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Framework1Suite] -->
