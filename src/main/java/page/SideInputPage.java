@@ -12,6 +12,10 @@ public class SideInputPage {
 	WebElement checkBox;
 	@FindBy(xpath="//a[@href='ajax-form-submit.php']")
 	WebElement ajaxForm;
+	@FindBy(xpath="//a[@href='form-submit.php']")
+	WebElement formSubmit;
+	@FindBy(xpath="//a[@href='radio-button-demo.php']")
+	WebElement radioButtons;
 	public SideInputPage (WebDriver driver) {
 		this.driver=driver;
 	}
@@ -23,5 +27,11 @@ public class SideInputPage {
 	}
 	public void sideCheckBox() {
 		checkBox.click();
+	}
+	public void sideFormSubmit() {
+		formSubmit.click();
+	}
+	public void sideRadioButton() {
+		radioButtons.click();
 	}
 }

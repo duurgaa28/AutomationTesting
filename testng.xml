@@ -1,21 +1,21 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Framework1Suite">
-	<test name="InputTest">
+	<!--test name="InputTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="Test.InputTest"></class>
 		</classes>
-	</test>
+	</test-->
 	<test name="AjaxFormTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="Test.AjaxFormTest"></class>
 		</classes>
 	</test>
-	<test name="WindowPopUpTest">
+	<test name="JavascriptTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="Test.WindowPopUpTest"></class>
+			<class name="Test.JavascriptPromptVerifyTest"></class>
 		</classes>
 	</test>
 </suite> 

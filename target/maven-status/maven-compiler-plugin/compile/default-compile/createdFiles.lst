@@ -7,6 +7,7 @@ util\RetryAnalyzer.class
 page\AjaxFormPage.class
 util\ScreenShotClass.class
 page\TablePage.class
+page\FormSubmitPage.class
 page\SimpleFormPage.class
 page\CheckBoxPage.class
 page\HomePage.class

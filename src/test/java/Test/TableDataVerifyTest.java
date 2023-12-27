@@ -20,7 +20,7 @@ import page.HomePage;
 import page.TablePage;
 import util.ExcelReadUtil;
 
-public class TableTest extends DriveIntiation {
+public class TableDataVerifyTest extends DriveIntiation {
 WebDriver driver;
 HomePage homePage;
 TablePage tablePage;

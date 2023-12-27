@@ -35,6 +35,7 @@ public void jsConfirmClick() {
 }
 public void jsPromptClick() {
 	jsPromptBox.click();
+	
 }
 public void alertSet(String propertyName) throws Exception {
 	try {
@@ -42,6 +43,7 @@ public void alertSet(String propertyName) throws Exception {
 		Assert.assertEquals(jsalert.getText().trim(),"Please enter your name");
 		String name=PropertyRead.getProperty(propertyName,"Not found");
 		jsalert.sendKeys(name);
+		jsalert.accept();
 		//Assert.assertEquals(jsAlertPage.getTheEntered().trim(),"You have entered"+name);
 		
 		}

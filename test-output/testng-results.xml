@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-27T01:41:23 IST" name="Default suite" finished-at="2023-12-27T01:41:41 IST" duration-ms="18348">
+  <suite started-at="2023-12-28T01:30:08 IST" name="Default suite" finished-at="2023-12-28T01:30:18 IST" duration-ms="10120">
     <groups>
     </groups>
-    <test started-at="2023-12-27T01:41:23 IST" name="Default test" finished-at="2023-12-27T01:41:41 IST" duration-ms="18348">
-      <class name="Test.WindowPopUpTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.WindowPopUpTest@58cbafc2]" started-at="2023-12-27T01:41:23 IST" name="setUp" finished-at="2023-12-27T01:41:26 IST" duration-ms="2929" status="PASS">
+    <test started-at="2023-12-28T01:30:08 IST" name="Default test" finished-at="2023-12-28T01:30:18 IST" duration-ms="10120">
+      <class name="Test.RadioButtonTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.RadioButtonTest@58cbafc2]" started-at="2023-12-28T01:30:08 IST" name="setUp" finished-at="2023-12-28T01:30:12 IST" duration-ms="4077" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="windowPopUp()[pri:0, instance:Test.WindowPopUpTest@58cbafc2]" started-at="2023-12-27T01:41:26 IST" name="windowPopUp" finished-at="2023-12-27T01:41:41 IST" duration-ms="14944" status="PASS">
+        <test-method signature="radioBtnTest()[pri:0, instance:Test.RadioButtonTest@58cbafc2]" started-at="2023-12-28T01:30:12 IST" name="radioBtnTest" finished-at="2023-12-28T01:30:18 IST" duration-ms="5633" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- windowPopUp -->
-        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.WindowPopUpTest@58cbafc2]" started-at="2023-12-27T01:41:41 IST" name="closeTest" finished-at="2023-12-27T01:41:41 IST" duration-ms="425" status="PASS">
+        </test-method> <!-- radioBtnTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.RadioButtonTest@58cbafc2]" started-at="2023-12-28T01:30:18 IST" name="closeTest" finished-at="2023-12-28T01:30:18 IST" duration-ms="342" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeTest -->
-      </class> <!-- Test.WindowPopUpTest -->
+      </class> <!-- Test.RadioButtonTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -11,12 +11,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ExcelReadUtil {
 	public String readExcelData (int r, int c) throws IOException {
 		String stringValue=null;
-		FileInputStream inputfile = new FileInputStream("\\C:\\Users\\lenovo\\Downloads\\Book1.xlsx");
-		XSSFWorkbook workbook = new XSSFWorkbook(inputfile);
-		XSSFSheet sheet = workbook.getSheet("Employeedetails");
-		XSSFRow row = sheet.getRow(r);
-		Cell cell = row.getCell(c);
-	 stringValue=cell.getStringCellValue();
+		String inputfile = System.getProperty("user.dir")+"/src/test/resources/Book1.xlsx";
+		 try (FileInputStream fis = new FileInputStream(inputfile);
+	             XSSFWorkbook workbook = new XSSFWorkbook(fis)) {
+	            XSSFSheet sheet = workbook.getSheet("Employeedetails");
+	            XSSFRow row = sheet.getRow(r);
+	            Cell cell = row.getCell(c);
+	            stringValue = cell.getStringCellValue();
+	        }
 	 return stringValue;
 	}
 }

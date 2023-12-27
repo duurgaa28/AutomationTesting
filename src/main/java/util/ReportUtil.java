@@ -11,7 +11,7 @@ public class ReportUtil {//implements ITestListener{
 	 static  ExtentReports extentReports;
 	
 	public static ExtentReports generateReports(){
-			String reportPath = System.getProperty("user.dir") + "/test-output/ExtentReport1.1.html";
+			String reportPath = System.getProperty("user.dir") + "/test-output/ExtentReportone.html";
 		    ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(reportPath);
 		    htmlReporter.config().setDocumentTitle("Automation Reports");
 		    htmlReporter.config().setReportName("Test Automation Results");
