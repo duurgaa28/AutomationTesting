@@ -37,4 +37,10 @@ public void alertsAndModalsClick() {
 public void tableClick() {
 	table.click();
 }
+public void progressBarsClick() {
+	progressBars.click();
+}
+public void othersClick() {
+	others.click();
+}
 }

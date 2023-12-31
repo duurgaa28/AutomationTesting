@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -13,6 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import page.HomePage;
 import page.InputPage;
 
+@Listeners(util.ReportUtil.class)
 public class InputTest extends DriveIntiation   {
 HomePage homePage;
 	InputPage inputPage;

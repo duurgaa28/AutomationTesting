@@ -5,6 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -16,6 +17,7 @@ import page.SideInputPage;
 import util.PropertyRead;
 import util.ScreenShotClass;
 
+@Listeners(util.ReportUtil.class)
 public class FormSubmitTest extends DriveIntiation {
 WebDriver driver;
 HomePage homepage;
@@ -47,7 +49,7 @@ public void formSubmitTest() throws Exception {
 	 formSubmitPage.inputState(stateNameText);
 	 String zipCodeText=PropertyRead.getProperty("Zip_Code", "Not found");
 	 formSubmitPage.inputZip(zipCodeText);
-	 formSubmitPage.checkBox(false);
+	 formSubmitPage.checkBox(true);
 	 formSubmitPage.submitFormClick();
 	 Assert.assertEquals(formSubmitPage.getDisplayedMsg(), "Form has been submitted successfully!");
 	 ScreenShotClass.takeScreenshot("FormSubmit.png", driver);

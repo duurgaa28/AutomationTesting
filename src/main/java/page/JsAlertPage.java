@@ -38,17 +38,11 @@ public void jsPromptClick() {
 	
 }
 public void alertSet(String propertyName) throws Exception {
-	try {
 		Alert jsalert = driver.switchTo().alert();
 		Assert.assertEquals(jsalert.getText().trim(),"Please enter your name");
 		String name=PropertyRead.getProperty(propertyName,"Not found");
 		jsalert.sendKeys(name);
 		jsalert.accept();
-		//Assert.assertEquals(jsAlertPage.getTheEntered().trim(),"You have entered"+name);
-		
-		}
-		catch(NoAlertPresentException e) {
-		}
 }
 public String getTheEntered() {
 	return youEntered.getText();

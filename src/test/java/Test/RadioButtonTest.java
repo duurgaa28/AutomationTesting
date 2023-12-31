@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -14,6 +15,8 @@ import page.RadioButtonPage;
 import page.SideInputPage;
 import util.ScreenShotClass;
 
+
+@Listeners(util.ReportUtil.class)
 public class RadioButtonTest extends DriveIntiation {
 	WebDriver driver;
 	HomePage homePage;

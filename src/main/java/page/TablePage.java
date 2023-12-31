@@ -16,6 +16,11 @@ public class TablePage {
 	WebDriver driver;
 	@FindBy(xpath = "//table[@id='dtBasicExample']/tbody/descendant::tr/child::td[1]")
 	List<WebElement> tables;
+	WebElement position;
+	WebElement office;
+	WebElement age;
+	WebElement startDate;
+	WebElement salary;
 
 	public TablePage(WebDriver driver) {
 		this.driver = driver;
@@ -25,29 +30,43 @@ public class TablePage {
 		// int count = tables.size();
 		int currentRow = 1;
 		for (WebElement eachRow : tables) {
-			if (eachRow.getText().equals(expectedName)) {
+			if (eachRow.getText().trim().equals(expectedName)) {
 				WebElement position = driver.findElement(By
 						.xpath("//table[@id='dtBasicExample']/tbody/descendant::tr[" + currentRow + "]/child::td[2]"));
-				position.getText();
+				
 				WebElement office = driver.findElement(By
 						.xpath("//table[@id='dtBasicExample']/tbody/descendant::tr[" + currentRow + "]/child::td[3]"));
-				office.getText();
+			;
 				WebElement age = driver.findElement(By
 						.xpath("//table[@id='dtBasicExample']/tbody/descendant::tr[" + currentRow + "]/child::td[4]"));
-				age.getText();
+			
 				WebElement startDate = driver.findElement(By
 						.xpath("//table[@id='dtBasicExample']/tbody/descendant::tr[" + currentRow + "]/child::td[5]"));
-				startDate.getText();
+				
 				WebElement salary = driver.findElement(By
 						.xpath("//table[@id='dtBasicExample']/tbody/descendant::tr[" + currentRow + "]/child::td[6]"));
-				salary.getText();
+			
 				
 				break;
 			}
 
 		}
+		
+		}
+	 public String getPosition() {
+			return position.getText().trim();
 
 	}
-	
+	 public String getOffice() {
+		 return office.getText().trim();
+	 }
+	 public String getAge() {
+		 return age.getText().trim();
+	 }
+	 public String getStartDate() {
+		 return startDate.getText().trim();
+	 }
+public String getSalary() {
+	return salary.getText().trim();
 }
-	
+}

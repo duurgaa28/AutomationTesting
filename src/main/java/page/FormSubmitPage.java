@@ -24,6 +24,8 @@ WebElement agreeCheckBox;
 WebElement submitFormButton;
 @FindBy(xpath="//div[@id='message-one']")
 WebElement formMessage;
+@FindBy(xpath="//div[@class='form-check']//div[@class='invalid-feedback']")
+WebElement warningMessage;
 public FormSubmitPage(WebDriver driver) {
 	this.driver=driver;
 }
@@ -47,12 +49,16 @@ public void inputZip(String zipcode) {
 }
 public void checkBox(Boolean checkBoxB) {
 	if(checkBoxB) {
-	agreeCheckBox.click();}
+	agreeCheckBox.click();
+	}
 }
 public void submitFormClick() {
 	submitFormButton.click();
 }
 public String getDisplayedMsg() {
 	return formMessage.getText();
+}
+public String getWarning () {
+	return warningMessage.getText();
 }
 }

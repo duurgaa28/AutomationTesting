@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import util.WaitUtil;
+
 public class AjaxFormPage {
 WebDriver driver;
 @FindBy(xpath="//input[@id='subject']")
@@ -32,8 +34,8 @@ public void submitClick() {
 	submitBtn.click();
 }
 public String theMessage() {
-	WebDriverWait webDriverWait=new WebDriverWait(driver,Duration.ofSeconds(15));
-	 webDriverWait.until(ExpectedConditions.textToBePresentInElement(message,"Form has been submitted successfully!"));
-	 return message.getText();
+    WaitUtil waitUtil = new WaitUtil(driver); 
+    waitUtil.explicitWaitVisible(15, message, "Form has been submitted successfully!");
+    return message.getText();
 }
 }

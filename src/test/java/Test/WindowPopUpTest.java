@@ -5,6 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -15,6 +16,7 @@ import page.SideAlertsAndModalsPage;
 import page.WindowPopUpPage;
 import util.ScreenShotClass;
 
+@Listeners(util.ReportUtil.class)
 public class WindowPopUpTest extends DriveIntiation {
 WebDriver driver;
 HomePage homePage;
