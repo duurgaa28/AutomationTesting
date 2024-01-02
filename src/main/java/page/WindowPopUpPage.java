@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import util.WaitUtil;
 import util.WindowHandleUtil;
 
 public class WindowPopUpPage {
@@ -26,6 +27,8 @@ public void facebookBtnClick() {
 	WindowHandleUtil.windowHandle(driver);
 }
 	public  String getTitles() {
+		WaitUtil waitUtil = new WaitUtil(driver);
+		waitUtil.explicitWait(25, title);
 		return title.getText();
 	}
 

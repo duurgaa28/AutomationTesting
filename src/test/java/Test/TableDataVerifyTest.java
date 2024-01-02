@@ -26,47 +26,39 @@ import page.HomePage;
 import page.TablePage;
 import util.ExcelReadUtil;
 import util.ReportUtil;
+import util.RetryAnalyzer;
 import util.ScreenShotClass;
-
 
 @Listeners(util.ReportUtil.class)
 public class TableDataVerifyTest extends DriveIntiation {
 	WebDriver driver;
 	HomePage homePage;
 	TablePage tablePage;
-	 ExtentReports extentReports;
-	 private ExtentTest extentTest;
+	ExtentReports extentReports;
+
 
 	@BeforeTest
 	@Parameters({ "browser" })
 	public void setUp(@Optional("chrome") String browser) throws Exception {
 		driver = super.driveInitialize(browser);
 		driver.get(INTIAL_URL);
-		 extentTest=ReportUtil.getExtentReports().createTest("Ajax Form Test");
 	}
 
-	@Test(dataProvider = "employeeDetails")
-	public void tableVerify( String position, String office, String age, String startDate, String salary) throws Exception {
-		driver.get(INTIAL_URL);
+	@Test(testName=" Table Test",dataProvider = "employeeDetails", retryAnalyzer = RetryAnalyzer.class)
+	public void tableVerify(String position, String office, String age, String startDate, String salary)
+			throws Exception {
 		homePage = PageFactory.initElements(driver, HomePage.class);
 		homePage.tableClick();
 		tablePage = PageFactory.initElements(driver, TablePage.class);
 		tablePage.tableCheck("Ashton Cox");
-try {
-		Assert.assertEquals(tablePage.getPosition(), position);
-		Assert.assertEquals(tablePage.getOffice(), office);
-		Assert.assertEquals(tablePage.getAge(), age);
-		Assert.assertEquals(tablePage.getStartDate(), startDate);
-		Assert.assertEquals(tablePage.getSalary(), salary);
-		extentTest.log(Status.PASS,"Successful");
+			Assert.assertEquals(tablePage.getPosition(), position);
+			Assert.assertEquals(tablePage.getOffice(), office);
+			Assert.assertEquals(tablePage.getAge(), age);
+			Assert.assertEquals(tablePage.getStartDate(), startDate);
+			Assert.assertEquals(tablePage.getSalary(), salary);
+		ScreenShotClass.takeScreenshot("Table.png", driver);
 	}
-catch(AssertionError assertionError){
-	 extentTest.log(Status.FAIL, "Test failed");
-	 throw new TestException ("Assertion Error");
-}
-ScreenShotClass.takeScreenshot("Table.png", driver);
 
-}
 	@DataProvider(name = "employeeDetails")
 	public Object[][] getEmployeeDetails() throws IOException {
 		List<String[]> infoList = new ArrayList<>();

@@ -16,12 +16,11 @@ public class TablePage {
 	WebDriver driver;
 	@FindBy(xpath = "//table[@id='dtBasicExample']/tbody/descendant::tr/child::td[1]")
 	List<WebElement> tables;
-	WebElement position;
-	WebElement office;
-	WebElement age;
-	WebElement startDate;
-	WebElement salary;
-
+WebElement position;
+WebElement office;
+WebElement age;
+WebElement startDate;
+WebElement salary;
 	public TablePage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -31,42 +30,39 @@ public class TablePage {
 		int currentRow = 1;
 		for (WebElement eachRow : tables) {
 			if (eachRow.getText().trim().equals(expectedName)) {
-				WebElement position = driver.findElement(By
+				 position = driver.findElement(By
 						.xpath("//table[@id='dtBasicExample']/tbody/descendant::tr[" + currentRow + "]/child::td[2]"));
-				
-				WebElement office = driver.findElement(By
+				office = driver.findElement(By
 						.xpath("//table[@id='dtBasicExample']/tbody/descendant::tr[" + currentRow + "]/child::td[3]"));
-			;
-				WebElement age = driver.findElement(By
+				age = driver.findElement(By
 						.xpath("//table[@id='dtBasicExample']/tbody/descendant::tr[" + currentRow + "]/child::td[4]"));
-			
-				WebElement startDate = driver.findElement(By
+				 startDate = driver.findElement(By
 						.xpath("//table[@id='dtBasicExample']/tbody/descendant::tr[" + currentRow + "]/child::td[5]"));
-				
-				WebElement salary = driver.findElement(By
+				 salary = driver.findElement(By
 						.xpath("//table[@id='dtBasicExample']/tbody/descendant::tr[" + currentRow + "]/child::td[6]"));
-			
-				
 				break;
 			}
-
+			 currentRow++;
 		}
-		
-		}
-	 public String getPosition() {
-			return position.getText().trim();
+	}	
+	public String getPosition() {
+		return position.getText().trim();
 
 	}
-	 public String getOffice() {
-		 return office.getText().trim();
-	 }
-	 public String getAge() {
-		 return age.getText().trim();
-	 }
-	 public String getStartDate() {
-		 return startDate.getText().trim();
-	 }
-public String getSalary() {
-	return salary.getText().trim();
-}
+
+	public String getOffice() {
+		return office.getText().trim();
+	}
+
+	public String getAge() {
+		return age.getText().trim();
+	}
+
+	public String getStartDate() {
+		return startDate.getText().trim();
+	}
+
+	public String getSalary() {
+		return salary.getText().trim();
+	}
 }

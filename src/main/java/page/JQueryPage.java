@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import util.WaitUtil;
+
 public class JQueryPage {
 WebDriver driver;
 @FindBy(xpath="//button[@id='downloadButton']")
@@ -16,14 +18,14 @@ WebElement downloadButton;
 WebElement closeButton;
 
 public JQueryPage(WebDriver driver) {
-	this.driver=driver;
+    this.driver = driver;
 }
 public void downloadBtnClick() {
 	downloadButton.click();
 }
 public void closeBtnClick() {
-	WebDriverWait webDriverWait=new WebDriverWait(driver,Duration.ofSeconds(25));
-	 webDriverWait.until(ExpectedConditions.elementToBeClickable(closeButton));
+	WaitUtil waitUtil = new WaitUtil(driver);
+	waitUtil.explicitWait(25, closeButton);
 	closeButton.click();
 }
 }

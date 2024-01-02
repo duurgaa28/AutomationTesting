@@ -38,7 +38,7 @@ public void fluentWait() {
 	fluentWait.ignoring(WebDriverException.class);
 	WebElement element = fluentWait.until(new Function<WebDriver, WebElement>() {
 		public WebElement apply(WebDriver arg) {
-			return arg.findElement(By.xpath("//a[text()='Javascript Alert']"));
+			return arg.findElement(By.xpath(""));
 		}
 	});
 }
