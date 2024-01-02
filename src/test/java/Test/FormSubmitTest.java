@@ -63,7 +63,7 @@ public class FormSubmitTest extends DriveIntiation {
 		formSubmitPage.submitFormClick();
 		
 		Assert.assertEquals(formSubmitPage.getDisplayedMsg(), "Form has been submitted successfully!");
-		ScreenShotClass.takeScreenshot("FormSubmit.png", driver);
+		ScreenShotClass.takeScreenshot("FormSubmit_True.png", driver);
 	}
 
 	@AfterTest
