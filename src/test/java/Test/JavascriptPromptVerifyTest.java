@@ -27,51 +27,57 @@ import page.JsAlertPage;
 import page.SideAlertsAndModalsPage;
 import util.PropertyRead;
 import util.ReportUtil;
+import util.RetryAnalyzer;
 import util.ScreenShotClass;
 
-@Listeners(util.ReportUtil.class)
+//@Listeners(util.ReportUtil.class)
 public class JavascriptPromptVerifyTest extends DriveIntiation {
-WebDriver driver;
-HomePage homePage;
+	WebDriver driver;
+	HomePage homePage;
 
-InputPage inputPage;
-SideAlertsAndModalsPage alertsAndModalsPage;
-JsAlertPage jsAlertPage;
-ExtentReports extentReports;
- private ExtentTest extentTest;
+	InputPage inputPage;
+	SideAlertsAndModalsPage alertsAndModalsPage;
+	JsAlertPage jsAlertPage;
+	ExtentReports extentReports;
+	private ExtentTest extentTest;
 
-@BeforeTest
-@Parameters({"browser"})
-public void setUp(@Optional("chrome") String browser)throws Exception {
-	driver=super.driveInitialize(browser);
-	 
-	
-}
+	@BeforeTest
+	@Parameters({ "browser" })
+	public void setUp(@Optional("chrome") String browser) throws Exception {
+		driver = super.driveInitialize(browser);
+		driver.get(INTIAL_URL);
+		// extentTest=ReportUtil.getExtentReports().createTest("jsPromptTest");
 
-@Test
-public void jsPrompt() throws Exception {
-	driver.get(INTIAL_URL);
-	extentTest=ReportUtil.getExtentReports().createTest("jsPromptTest");
-	homePage=PageFactory.initElements(driver, HomePage.class);
-	homePage.alertsAndModalsClick();
-	alertsAndModalsPage=PageFactory.initElements(driver, SideAlertsAndModalsPage.class);
-	alertsAndModalsPage.jsAlert();
-	jsAlertPage=PageFactory.initElements(driver, JsAlertPage.class);
-	jsAlertPage.jsPromptClick();
-	jsAlertPage.alertSet("Enter_Your_Name");
-	ScreenShotClass.takeScreenshot("JsPrompt.png", driver);
-	try {
-	extentTest.log(Status.PASS,"Successful");
 	}
-	catch (AssertionError assertionError) {
-		extentTest.log(Status.FAIL, "Alert Test failed");
-		extentTest.log(Status.FAIL, "Unhandled alert");
-		throw new TestException("Assertion Error");
+
+	@Test(retryAnalyzer = RetryAnalyzer.class)
+	public void jsPrompt() throws Exception {
+		homePage = PageFactory.initElements(driver, HomePage.class);
+		homePage.alertsAndModalsClick();
+		alertsAndModalsPage = PageFactory.initElements(driver, SideAlertsAndModalsPage.class);
+		alertsAndModalsPage.jsAlert();
+		jsAlertPage = PageFactory.initElements(driver, JsAlertPage.class);
+		jsAlertPage.jsPromptClick();
+		Alert jsalert = driver.switchTo().alert();
+
+		try {
+			Assert.assertEquals(jsalert.getText().trim(), "Please enter your name");
+			String name = PropertyRead.getProperty("Enter_Your_Name", "Not found");
+			jsalert.sendKeys(name);
+			jsalert.accept();
+			ScreenShotClass.takeScreenshot("JsPrompt.png", driver);
+			// extentTest.log(Status.PASS,"Successful");
+		} catch (AssertionError assertionError) {
+			ScreenShotClass.takeScreenshot("JsPrompt fail.png", driver);
+			// extentTest.log(Status.FAIL, "Alert Test failed");
+			// extentTest.log(Status.FAIL, "Unhandled alert");
+			throw new TestException("Assertion Error");
+		}
+
 	}
-	
+
+	@AfterTest
+	public void closeTest() {
+		driver.quit();
 	}
-@AfterTest
-public void closeTest() {
-	driver.quit();
-}
 }

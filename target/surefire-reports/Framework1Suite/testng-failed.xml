@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Framework1Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" parallel="classes" name="Table Verify Test(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="Test.TableDataVerifyTest">
+        <methods>
+          <include name="closeTest"/>
+          <include name="setUp"/>
+          <include name="tableVerify" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Test.TableDataVerifyTest -->
+    </classes>
+  </test> <!-- Table Verify Test(failed) -->
+</suite> <!-- Failed suite [Framework1Suite] -->

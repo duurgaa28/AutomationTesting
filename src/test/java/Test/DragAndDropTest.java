@@ -17,34 +17,36 @@ import Base.DriveIntiation;
 import page.DragAndDropPage;
 import page.HomePage;
 import util.ReportUtil;
+import util.RetryAnalyzer;
 import util.ScreenShotClass;
 
-
-@Listeners(util.ReportUtil.class)
+//@Listeners(util.ReportUtil.class)
 public class DragAndDropTest extends DriveIntiation {
 	WebDriver driver;
 	HomePage homePage;
 	DragAndDropPage dragAndDrop;
 	ExtentReports extentReports;
-	 private ExtentTest extentTest;
+	private ExtentTest extentTest;
 
-	
 	@BeforeTest
-	@Parameters({"browser"})
-	public void setUp(@Optional("chrome") String browser)throws Exception {
-		driver=super.driveInitialize(browser);
-	}
-	@Test
-	public void dragAndDropTest() throws Exception {
+	@Parameters({ "browser" })
+	public void setUp(@Optional("chrome") String browser) throws Exception {
+		driver = super.driveInitialize(browser);
 		driver.get(INTIAL_URL);
-		extentTest=ReportUtil.getExtentReports().createTest("jsPromptTest");
-		homePage=PageFactory.initElements(driver, HomePage.class);
+		// extentTest=ReportUtil.getExtentReports().createTest("drag and drop test");
+	}
+
+	@Test(retryAnalyzer = RetryAnalyzer.class)
+	public void dragAndDropTest() throws Exception {
+
+		homePage = PageFactory.initElements(driver, HomePage.class);
 		homePage.othersClick();
-		dragAndDrop=PageFactory.initElements(driver, DragAndDropPage.class);
+		dragAndDrop = PageFactory.initElements(driver, DragAndDropPage.class);
 		dragAndDrop.dragAndDropThree();
 		ScreenShotClass.takeScreenshot("Drag and Drop.png", driver);
-		extentTest.log(Status.PASS,"Successful");
+		// extentTest.log(Status.PASS,"Successful");
 	}
+
 	@AfterTest
 	public void closeTest() {
 		driver.quit();

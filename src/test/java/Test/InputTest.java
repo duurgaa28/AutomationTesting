@@ -9,33 +9,47 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import Base.DriveIntiation;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import page.HomePage;
 import page.InputPage;
+import util.ReportUtil;
+import util.RetryAnalyzer;
+import util.ScreenShotClass;
 
-@Listeners(util.ReportUtil.class)
-public class InputTest extends DriveIntiation   {
-HomePage homePage;
+//@Listeners(util.ReportUtil.class)
+public class InputTest extends DriveIntiation {
+	HomePage homePage;
 	InputPage inputPage;
 	WebDriver driver;
-	
+	ExtentReports extentReports;
+	private ExtentTest extentTest;
+
 	@BeforeTest
-	@Parameters({"browser"})
+	@Parameters({ "browser" })
 	public void setUp(String browser) throws Exception {
-		driver=super.driveInitialize(browser);
-	}
-	@Test
-	public void inputTest () {
+		driver = super.driveInitialize(browser);
 		driver.get(INTIAL_URL);
-		homePage=PageFactory.initElements(driver, HomePage.class);
+		// extentTest=ReportUtil.getExtentReports().createTest("form submit Test");
+	}
+
+	@Test(retryAnalyzer = RetryAnalyzer.class)
+	public void inputTest() throws Exception {
+		homePage = PageFactory.initElements(driver, HomePage.class);
 		homePage.inputFormclick();
 		// inputPage=new InputPage(driver);
 		inputPage = PageFactory.initElements(driver, InputPage.class);
 		inputPage.sideSelectInput();
 		inputPage.selectColourDrop("Red");
 		inputPage.multiSelectColourDrop("Green");
+		ScreenShotClass.takeScreenshot("InputTest.png", driver);
+		// extentTest.log(Status.PASS,"Successful");
 	}
+
 	@AfterTest
 	public void closeTest() {
 		driver.close();

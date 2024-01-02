@@ -5,9 +5,13 @@ D:\pageObjectModelfactory\src\main\java\util\PropertyRead.java
 D:\pageObjectModelfactory\src\main\java\util\ExcelReadUtil.java
 D:\pageObjectModelfactory\src\main\java\page\SideInputPage.java
 D:\pageObjectModelfactory\src\main\java\page\SimpleFormPage.java
+D:\pageObjectModelfactory\src\main\java\util\WaitUtil.java
+D:\pageObjectModelfactory\src\main\java\page\DragAndDropPage.java
 D:\pageObjectModelfactory\src\main\java\page\FormSubmitPage.java
 D:\pageObjectModelfactory\src\main\java\page\AjaxFormPage.java
+D:\pageObjectModelfactory\src\main\java\page\JQueryPage.java
 D:\pageObjectModelfactory\src\main\java\page\JsAlertPage.java
+D:\pageObjectModelfactory\src\main\java\page\RadioButtonPage.java
 D:\pageObjectModelfactory\src\main\java\page\TablePage.java
 D:\pageObjectModelfactory\src\main\java\util\WindowHandleUtil.java
 D:\pageObjectModelfactory\src\main\java\page\WindowPopUpPage.java

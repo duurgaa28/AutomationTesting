@@ -17,9 +17,9 @@ import Base.DriveIntiation;
 import page.HomePage;
 import page.JQueryPage;
 import util.ReportUtil;
+import util.RetryAnalyzer;
 
-
-@Listeners(util.ReportUtil.class)
+//@Listeners(util.ReportUtil.class)
 public class JQueryTest extends DriveIntiation {
 	WebDriver driver;
 	HomePage homePage;
@@ -31,18 +31,18 @@ public class JQueryTest extends DriveIntiation {
 	@Parameters({ "browser" })
 	public void setUp(@Optional("chrome") String browser) throws Exception {
 		driver = super.driveInitialize(browser);
+		driver.get(INTIAL_URL);
+		// extentTest = ReportUtil.getExtentReports().createTest("JQuery Test ");
 	}
 
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void jQueryTest() {
-		driver.get(INTIAL_URL);
-		extentTest = ReportUtil.getExtentReports().createTest("JQuery Test ");
 		homePage = PageFactory.initElements(driver, HomePage.class);
 		homePage.progressBarsClick();
 		jQueryPage = PageFactory.initElements(driver, JQueryPage.class);
 		jQueryPage.downloadBtnClick();
 		jQueryPage.closeBtnClick();
-		extentTest.log(Status.PASS, "Successful");
+		// extentTest.log(Status.PASS, "Successful");
 	}
 
 	@AfterTest

@@ -1,8 +1,8 @@
-Test\FormSubmitTest.class
 Test\WindowPopUpTest.class
-Test\JavascriptPromptVerifyTest.class
 Test\InputTest.class
 Test\SimpleFormTest.class
-Test\CheckBoxTest.class
 Test\TableDataVerifyTest.class
+Test\FormSubmitTest.class
+Test\JavascriptPromptVerifyTest.class
+Test\CheckBoxTest.class
 Test\AjaxFormTest.class
