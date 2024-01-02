@@ -30,7 +30,7 @@ import util.ReportUtil;
 import util.RetryAnalyzer;
 import util.ScreenShotClass;
 
-@Listeners(util.ReportUtil.class)
+//@Listeners(util.ReportUtil.class)
 public class JavascriptPromptVerifyTest extends DriveIntiation {
 	WebDriver driver;
 	HomePage homePage;
@@ -39,15 +39,12 @@ public class JavascriptPromptVerifyTest extends DriveIntiation {
 	SideAlertsAndModalsPage alertsAndModalsPage;
 	JsAlertPage jsAlertPage;
 	ExtentReports extentReports;
-	private ExtentTest extentTest;
 
 	@BeforeTest
 	@Parameters({ "browser" })
 	public void setUp(@Optional("chrome") String browser) throws Exception {
 		driver = super.driveInitialize(browser);
 		driver.get(INTIAL_URL);
-		 extentTest=ReportUtil.getExtentReports().createTest("jsPromptTest");
-
 	}
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)
@@ -59,21 +56,11 @@ public class JavascriptPromptVerifyTest extends DriveIntiation {
 		jsAlertPage = PageFactory.initElements(driver, JsAlertPage.class);
 		jsAlertPage.jsPromptClick();
 		Alert jsalert = driver.switchTo().alert();
-
-		try {
 			Assert.assertEquals(jsalert.getText().trim(), "Please enter your name");
 			String name = PropertyRead.getProperty("Enter_Your_Name", "Not found");
 			jsalert.sendKeys(name);
 			jsalert.accept();
 			ScreenShotClass.takeScreenshot("JsPrompt.png", driver);
-			extentTest.log(Status.PASS,"Successful");
-		} catch (AssertionError assertionError) {
-			ScreenShotClass.takeScreenshot("JsPrompt fail.png", driver);
-			 extentTest.log(Status.FAIL, "Alert Test failed");
-			 extentTest.log(Status.FAIL, "Unhandled alert");
-			throw new TestException("Assertion Error");
-		}
-
 	}
 
 	@AfterTest

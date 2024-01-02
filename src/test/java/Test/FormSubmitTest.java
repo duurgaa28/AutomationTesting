@@ -24,21 +24,20 @@ import util.ReportUtil;
 import util.RetryAnalyzer;
 import util.ScreenShotClass;
 
-@Listeners(util.ReportUtil.class)
+//@Listeners(util.ReportUtil.class)
 public class FormSubmitTest extends DriveIntiation {
 	WebDriver driver;
 	HomePage homepage;
 	SideInputPage sideInputPage;
 	FormSubmitPage formSubmitPage;
 	ExtentReports extentReports;
-	private ExtentTest extentTest;
+
 
 	@BeforeTest
 	@Parameters({ "browser" })
 	public void setUp(@Optional("chrome") String browser) throws Exception {
 		driver = super.driveInitialize(browser);
 		driver.get(INTIAL_URL);
-		extentTest=ReportUtil.getExtentReports().createTest("form submit Test");
 	}
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)
@@ -62,13 +61,8 @@ public class FormSubmitTest extends DriveIntiation {
 		formSubmitPage.inputZip(zipCodeText);
 		formSubmitPage.checkBox(true);
 		formSubmitPage.submitFormClick();
-		try {
-			Assert.assertEquals(formSubmitPage.getDisplayedMsg(), "Form has been submitted successfully!");
-			 extentTest.log(Status.PASS,"Successful");
-		} catch (AssertionError assertionError) {
-			extentTest.log(Status.FAIL, "Test failed");
-			throw new TestException("Assertion Error");
-		}
+		
+		Assert.assertEquals(formSubmitPage.getDisplayedMsg(), "Form has been submitted successfully!");
 		ScreenShotClass.takeScreenshot("FormSubmit.png", driver);
 	}
 

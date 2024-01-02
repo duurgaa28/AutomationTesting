@@ -21,7 +21,9 @@ import util.ReportUtil;
 import util.RetryAnalyzer;
 import util.ScreenShotClass;
 
+
 @Listeners(util.ReportUtil.class)
+
 public class RadioButtonTest extends DriveIntiation {
 	WebDriver driver;
 	HomePage homePage;
@@ -35,7 +37,6 @@ public class RadioButtonTest extends DriveIntiation {
 	public void setUp(@Optional("chrome") String browser) throws Exception {
 		driver = super.driveInitialize(browser);
 		driver.get(INTIAL_URL);
-		extentTest = ReportUtil.getExtentReports().createTest("radio button Test ");
 	}
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)
@@ -48,7 +49,6 @@ public class RadioButtonTest extends DriveIntiation {
 		radiobtn.femaleRadioClick();
 		radiobtn.selectedValueClick();
 		ScreenShotClass.takeScreenshot("RadioButton.png", driver);
-		 extentTest.log(Status.PASS,"Successful");
 	}
 
 	@AfterTest

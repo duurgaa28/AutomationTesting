@@ -30,14 +30,12 @@ public class WindowPopUpTest extends DriveIntiation {
 	SideAlertsAndModalsPage alertsAndModalsPage;
 	WindowPopUpPage windowPopUpPage;
 	ExtentReports extentReports;
-	private ExtentTest extentTest;
 
 	@BeforeTest
 	@Parameters({ "browser" })
 	public void setUp(@Optional("chrome") String browser) throws Exception {
 		driver = super.driveInitialize(browser);
 		driver.get(INTIAL_URL);
-		extentTest = ReportUtil.getExtentReports().createTest("Table data verify test");
 	}
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)
@@ -49,15 +47,10 @@ public class WindowPopUpTest extends DriveIntiation {
 		windowPopUpPage = PageFactory.initElements(driver, WindowPopUpPage.class);
 		windowPopUpPage.facebookBtnClick();
 		windowPopUpPage.getTitles();
-		try {
 			Assert.assertEquals(windowPopUpPage.getTitles(), "Connect with Obsqura Zone on Facebook");
 			ScreenShotClass.takeScreenshot("windowpopup.png", driver);
-			extentTest.log(Status.PASS, "Successful");
-		} catch (AssertionError assertionError) {
-			extentTest.log(Status.FAIL, "Test failed");
-			throw new TestException("Assertion Error");
 		}
-	}
+	
 
 	@AfterTest
 	public void closeTest() {

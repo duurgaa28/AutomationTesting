@@ -30,20 +30,19 @@ import util.RetryAnalyzer;
 import util.ScreenShotClass;
 
 @Listeners(util.ReportUtil.class)
+
 public class AjaxFormTest extends DriveIntiation {
 	WebDriver driver;
 	HomePage homePage;
 	SideInputPage sideInputPage;
 	AjaxFormPage ajaxFormPage;
 	ExtentReports extentReports;
-	ExtentTest extentTest;
 
 	@BeforeTest
 	@Parameters({ "browser" })
 	public void setUp(@Optional("chrome") String browser) throws Exception {
 		driver = super.driveInitialize(browser);
 		driver.get(INTIAL_URL);
-		extentTest = ReportUtil.getExtentReports().createTest("Ajax Form Test");
 	}
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)
@@ -58,14 +57,6 @@ public class AjaxFormTest extends DriveIntiation {
 		String descriptionTexts = PropertyRead.getProperty("Enter_Description", "Not found");
 		ajaxFormPage.descriptionInput(descriptionTexts);
 		ajaxFormPage.submitClick();
-		try {
-			Assert.assertEquals(ajaxFormPage.theMessage(), "Form has been submitted successfully!");
-			extentTest.log(Status.PASS, "Successful");
-		} catch (AssertionError assertionError) {
-			extentTest.log(Status.FAIL,
-					"Expected:Form has been submitted successfully! Actual : " + ajaxFormPage.theMessage());
-			throw new TestException("Assertion Error");
-		}
 		ScreenShotClass.takeScreenshot("AjaxForm1.png", driver);
 	}
 

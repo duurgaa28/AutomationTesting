@@ -25,6 +25,7 @@ import util.RetryAnalyzer;
 import util.ScreenShotClass;
 
 @Listeners(util.ReportUtil.class)
+
 public class SimpleFormTest extends DriveIntiation {
 	WebDriver driver;
 	HomePage homePage;
@@ -35,10 +36,9 @@ public class SimpleFormTest extends DriveIntiation {
 
 	@BeforeTest
 	@Parameters({ "browser" })
-	public void setUp(@Optional("chrome") String browser) throws Exception {
+	public void setUp(String browser) throws Exception {
 		driver = super.driveInitialize(browser);
 		driver.get(INTIAL_URL);
-		extentTest =ReportUtil.getExtentReports().createTest("simpleFormTest");
 	}
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)
@@ -51,13 +51,6 @@ public class SimpleFormTest extends DriveIntiation {
 		singleInput.enterMessage("Show Message!");
 		singleInput.showButtonClick();
 		Assert.assertEquals(singleInput.getMessage(), "Your Message : Show Message!");
-		try {
-			 extentTest.log(Status.PASS,"Successful");
-		} catch (AssertionError assertionError) {
-			 extentTest.log(Status.FAIL, "Test failed");
-			extentTest.log(Status.FAIL, "Expected : Your Message : Show Message!, Actual: "+singleInput.getMessage() );
-			throw new TestException("Assertion Error");
-		}
 		ScreenShotClass.takeScreenshot("SimpleInput1.png", driver);
 
 	}
