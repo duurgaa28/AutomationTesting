@@ -25,14 +25,13 @@ import util.RetryAnalyzer;
 import util.ScreenShotClass;
 
 @Listeners(util.ReportUtil.class)
-public class SubmitFormTest extends DriveIntiation {
+public class SubmitFormErrorTest extends DriveIntiation {
 
 	WebDriver driver;
 	HomePage homepage;
 	SideInputPage sideInputPage;
 	FormSubmitPage formSubmitPage;
-	ExtentReports extentReports;
-	private ExtentTest extentTest;
+
 
 	@BeforeTest
 	@Parameters({ "browser" })

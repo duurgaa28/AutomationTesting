@@ -29,14 +29,12 @@ public class CheckBoxTest extends DriveIntiation {
 	SideInputPage sideInputPage;
 	HomePage homePage;
 	ExtentReports extentReports;
-	private ExtentTest extentTest;
 
 	@BeforeTest
 	@Parameters({ "browser" })
 	public void setUp(String browser) throws Exception {
 		driver = super.driveInitialize(browser);
 		driver.get(INTIAL_URL);
-		extentTest = ReportUtil.getExtentReports().createTest("form submit Test");
 	}
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)
@@ -49,7 +47,6 @@ public class CheckBoxTest extends DriveIntiation {
 		checkBox.singleCheckBox();
 		checkBox.multiCheckBox();
 		ScreenShotClass.takeScreenshot("CheckBox.png", driver);
-		extentTest.log(Status.PASS, "Successful");
 	}
 
 	@AfterTest

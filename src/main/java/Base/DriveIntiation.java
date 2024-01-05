@@ -13,13 +13,12 @@ public WebDriver driveInitialize (String browserName)throws Exception{
 WebDriver driver;
 
 if (browserName.equalsIgnoreCase("firefox")) {
-	System.setProperty("webdriver.gecko.driver", "C:\\Users\\lenovo\\new_selenium\\geckodriver-v0.33.0-win-aarch64\\geckodriver.exe");
+	 System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/src/main/resources/geckodriver.exe");
 	driver = new FirefoxDriver();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	} 
 	else if (browserName.equalsIgnoreCase("chrome")) {
-	System.setProperty("webdriver.chrome.driver",
-			"C:\\Users\\lenovo\\new_selenium\\chromedriver-win64\\chromedriver.exe ");
+		  System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/chromedriver.exe");
 	driver = new ChromeDriver();
 	} 
 	else {

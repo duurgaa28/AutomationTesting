@@ -9,15 +9,12 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class ScreenShotClass {
-	public static void takeScreenshot (String screenshotFile, WebDriver driver) throws Exception  {
-		TakesScreenshot takeScreenshot = (TakesScreenshot) driver;
-		File file = takeScreenshot.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(file,new File ("C:\\Users\\lenovo\\Desktop\\Durga\\Programs\\Screenshot\\"+screenshotFile));
-	}
-		
-	}
-
-
-		
+    public static void takeScreenshot(String screenshotFile, WebDriver driver) throws Exception {
+        TakesScreenshot takeScreenshot = (TakesScreenshot) driver;
+        File file = takeScreenshot.getScreenshotAs(OutputType.FILE);
+        String destination = System.getProperty("user.dir") + "/ScreenShots/" + screenshotFile;
+        FileUtils.copyFile(file, new File(destination));
+    }
+}	
 
 

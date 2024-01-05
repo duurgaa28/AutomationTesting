@@ -27,8 +27,7 @@ public class JQueryTest extends DriveIntiation {
 	HomePage homePage;
 	JQueryPage jQueryPage;
 	ExtentReports extentReports;
-	private ExtentTest extentTest;
-
+	
 	@BeforeTest
 	@Parameters({ "browser" })
 	public void setUp(@Optional("chrome") String browser) throws Exception {
@@ -43,7 +42,6 @@ public class JQueryTest extends DriveIntiation {
 		jQueryPage = PageFactory.initElements(driver, JQueryPage.class);
 		jQueryPage.downloadBtnClick();
 		jQueryPage.closeBtnClick();
-		// extentTest.log(Status.PASS, "Successful");
 	}
 
 	@AfterTest

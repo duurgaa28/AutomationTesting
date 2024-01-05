@@ -32,7 +32,6 @@ public class SimpleFormTest extends DriveIntiation {
 	DriveIntiation driveintiation;
 	SideInputPage simpleForm;
 	SimpleFormPage singleInput;
-	private ExtentTest extentTest;
 
 	@BeforeTest
 	@Parameters({ "browser" })

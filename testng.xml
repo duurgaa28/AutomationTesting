@@ -11,7 +11,7 @@
 	</test>
 	<test name="Input Test" parallel="classes" thread-count="2" >
 
-		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="Test.InputTest"></class>
 		</classes>
@@ -34,13 +34,13 @@
 	<test name="Form Test" parallel="classes" thread-count="2">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="Test.SubmitFormTest"></class>
+			<class name="Test.FormSubmitTest"></class>
 		</classes>
 	</test>
 	<test name="Form Error Test" parallel="classes" thread-count="2">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="Test.FormSubmitTest"></class>
+			<class name="Test.SubmitFormErrorTest"></class>
 		</classes>
 	</test>
 	<test name="Radio button Test" parallel="classes" thread-count="2">

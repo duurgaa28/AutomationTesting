@@ -36,7 +36,7 @@ public class AjaxFormTest extends DriveIntiation {
 	HomePage homePage;
 	SideInputPage sideInputPage;
 	AjaxFormPage ajaxFormPage;
-	ExtentReports extentReports;
+
 
 	@BeforeTest
 	@Parameters({ "browser" })
@@ -64,4 +64,5 @@ public class AjaxFormTest extends DriveIntiation {
 	public void closeTest() {
 		driver.quit();
 	}
+	
 }

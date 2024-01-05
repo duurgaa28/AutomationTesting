@@ -34,8 +34,6 @@ public class TableDataVerifyTest extends DriveIntiation {
 	WebDriver driver;
 	HomePage homePage;
 	TablePage tablePage;
-	ExtentReports extentReports;
-
 
 	@BeforeTest
 	@Parameters({ "browser" })
@@ -69,7 +67,6 @@ public class TableDataVerifyTest extends DriveIntiation {
 		String startDate = excelRead.readExcelData(4, 1);
 		String salary = excelRead.readExcelData(5, 1);
 		infoList.add(new String[] { position, office, age, startDate, salary });
-
 		return infoList.toArray(new String[infoList.size()][]);
 	}
 

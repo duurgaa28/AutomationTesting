@@ -30,7 +30,6 @@ public class RadioButtonTest extends DriveIntiation {
 	SideInputPage sideInputPage;
 	RadioButtonPage radiobtn;
 	ExtentReports extentReports;
-	private ExtentTest extentTest;
 
 	@BeforeTest
 	@Parameters({ "browser" })

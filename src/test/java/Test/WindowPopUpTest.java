@@ -29,7 +29,6 @@ public class WindowPopUpTest extends DriveIntiation {
 	HomePage homePage;
 	SideAlertsAndModalsPage alertsAndModalsPage;
 	WindowPopUpPage windowPopUpPage;
-	ExtentReports extentReports;
 
 	@BeforeTest
 	@Parameters({ "browser" })

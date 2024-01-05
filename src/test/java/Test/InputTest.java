@@ -27,7 +27,6 @@ public class InputTest extends DriveIntiation {
 	HomePage homePage;
 	InputPage inputPage;
 	WebDriver driver;
-	ExtentReports extentReports;
 	
 	@BeforeTest
 	@Parameters({ "browser" })

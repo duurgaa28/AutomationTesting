@@ -38,7 +38,6 @@ public class JavascriptPromptVerifyTest extends DriveIntiation {
 	InputPage inputPage;
 	SideAlertsAndModalsPage alertsAndModalsPage;
 	JsAlertPage jsAlertPage;
-	ExtentReports extentReports;
 
 	@BeforeTest
 	@Parameters({ "browser" })

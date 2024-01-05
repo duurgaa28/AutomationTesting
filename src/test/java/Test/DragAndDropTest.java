@@ -26,7 +26,7 @@ public class DragAndDropTest extends DriveIntiation {
 	WebDriver driver;
 	HomePage homePage;
 	DragAndDropPage dragAndDrop;
-	ExtentReports extentReports;
+
 	
 	@BeforeTest
 	@Parameters({ "browser" })
