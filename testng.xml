@@ -3,13 +3,13 @@
 	<listeners>
 		<listener class-name="util.ReportUtil"></listener>
 	</listeners>
-	<test name="Simple form" parallel="classes" thread-count="2" >
+	<test name="Simple form">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="Test.SimpleFormTest"></class>
 		</classes>
 	</test>
-	<test name="Input Test" parallel="classes" thread-count="2" >
+	<test name="Input Test">
 
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
@@ -17,46 +17,52 @@
 		</classes>
 	</test>
 
-	<test name="Facebook test" parallel="classes" thread-count="2" >
+	<test name="Facebook test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="Test.WindowPopUpTest"></class>
 		</classes>
 	</test>
 
-	<test name="Javascript prompt Alert Test" parallel="classes" thread-count="2" >
+	<test name="Javascript prompt Alert Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="Test.JavascriptPromptVerifyTest"></class>
 		</classes>
 	</test>
-	
-	<test name="Form Test" parallel="classes" thread-count="2">
+
+	<test name="Form Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="Test.FormSubmitTest"></class>
 		</classes>
 	</test>
-	<test name="Form Error Test" parallel="classes" thread-count="2">
+	<test name="Form Error Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="Test.SubmitFormErrorTest"></class>
 		</classes>
 	</test>
-	<test name="Radio button Test" parallel="classes" thread-count="2">
+	<test name="Radio button Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="Test.RadioButtonTest"></class>
 		</classes>
 	</test>
+	<test name="JQuery Test">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="Test.JQueryTest"></class>
+		</classes>
+	</test>
 
-	<test name="Drag and Drop Test" parallel="classes" thread-count="2">
+	<test name="Drag and Drop Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="Test.DragAndDropTest"></class>
 		</classes>
 	</test>
-	<test name="Table Verify Test" parallel="classes" thread-count="2" >
+	<test name="Table Verify Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="Test.TableDataVerifyTest"></class>
