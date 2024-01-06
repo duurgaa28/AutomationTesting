@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="8" failed="0" skipped="1">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-05T23:17:31 IST" name="Framework1Suite" finished-at="2024-01-05T23:18:33 IST" duration-ms="62225">
+  <suite started-at="2024-01-06T15:31:04 IST" name="Framework1Suite" finished-at="2024-01-06T15:32:08 IST" duration-ms="64369">
     <groups>
     </groups>
-    <test started-at="2024-01-05T23:17:31 IST" name="Simple form" finished-at="2024-01-05T23:17:40 IST" duration-ms="9181">
-      <class name="Test.SimpleFormTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.SimpleFormTest@34b9f960]" started-at="2024-01-05T23:17:31 IST" name="setUp" finished-at="2024-01-05T23:17:38 IST" duration-ms="7078" status="PASS">
+    <test started-at="2024-01-06T15:31:04 IST" name="Input Test" finished-at="2024-01-06T15:31:18 IST" duration-ms="14320">
+      <class name="Test.InputTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.InputTest@463fd068]" started-at="2024-01-06T15:31:04 IST" name="setUp" finished-at="2024-01-06T15:31:14 IST" duration-ms="10764" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,138 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="simpleFormTest()[pri:0, instance:Test.SimpleFormTest@34b9f960]" started-at="2024-01-05T23:17:38 IST" name="simpleFormTest" finished-at="2024-01-05T23:17:39 IST" duration-ms="1689" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- simpleFormTest -->
-        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.SimpleFormTest@34b9f960]" started-at="2024-01-05T23:17:39 IST" name="closeTest" finished-at="2024-01-05T23:17:40 IST" duration-ms="331" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeTest -->
-      </class> <!-- Test.SimpleFormTest -->
-    </test> <!-- Simple form -->
-    <test started-at="2024-01-05T23:17:31 IST" name="Input Test" finished-at="2024-01-05T23:17:52 IST" duration-ms="21072">
-      <class name="Test.InputTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.InputTest@463fd068]" started-at="2024-01-05T23:17:31 IST" name="setUp" finished-at="2024-01-05T23:17:52 IST" duration-ms="21040" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'LAPTOP-KFM2KDI1', ip: '192.168.1.6']]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'LAPTOP-KFM2KDI1', ip: '192.168.1.6'
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:549)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:227)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:154)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:151)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:146)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:130)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:100)
-at Base.DriveIntiation.driveInitialize(DriveIntiation.java:17)
-at Test.InputTest.setUp(InputTest.java:34)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
-at org.testng.TestRunner.beforeRun(TestRunner.java:633)
-at org.testng.TestRunner.run(TestRunner.java:595)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver process to start.
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: driver.version: FirefoxDriver
-at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-... 28 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="inputTest()[pri:0, instance:Test.InputTest@463fd068]" started-at="2024-01-05T23:17:52 IST" name="inputTest" finished-at="2024-01-05T23:17:52 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'LAPTOP-KFM2KDI1', ip: '192.168.1.6']]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'LAPTOP-KFM2KDI1', ip: '192.168.1.6'
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:549)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:227)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:154)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:151)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:146)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:130)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:100)
-at Base.DriveIntiation.driveInitialize(DriveIntiation.java:17)
-at Test.InputTest.setUp(InputTest.java:34)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
-at org.testng.TestRunner.beforeRun(TestRunner.java:633)
-at org.testng.TestRunner.run(TestRunner.java:595)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver process to start.
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: driver.version: FirefoxDriver
-at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-... 28 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+        <test-method signature="inputTest()[pri:0, instance:Test.InputTest@463fd068]" started-at="2024-01-06T15:31:14 IST" name="inputTest" finished-at="2024-01-06T15:31:17 IST" duration-ms="2917" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inputTest -->
-        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.InputTest@463fd068]" started-at="2024-01-05T23:17:52 IST" name="closeTest" finished-at="2024-01-05T23:17:52 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.InputTest@463fd068]" started-at="2024-01-06T15:31:17 IST" name="closeTest" finished-at="2024-01-06T15:31:18 IST" duration-ms="571" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeTest -->
       </class> <!-- Test.InputTest -->
     </test> <!-- Input Test -->
-    <test started-at="2024-01-05T23:17:52 IST" name="Javascript prompt Alert Test" finished-at="2024-01-05T23:17:58 IST" duration-ms="6448">
-      <class name="Test.JavascriptPromptVerifyTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.JavascriptPromptVerifyTest@589da3f3]" started-at="2024-01-05T23:17:52 IST" name="setUp" finished-at="2024-01-05T23:17:56 IST" duration-ms="4550" status="PASS">
+    <test started-at="2024-01-06T15:31:04 IST" name="Simple form" finished-at="2024-01-06T15:31:18 IST" duration-ms="14370">
+      <class name="Test.SimpleFormTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.SimpleFormTest@34b9f960]" started-at="2024-01-06T15:31:04 IST" name="setUp" finished-at="2024-01-06T15:31:15 IST" duration-ms="11304" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -160,88 +41,42 @@ at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="jsPrompt()[pri:0, instance:Test.JavascriptPromptVerifyTest@589da3f3]" started-at="2024-01-05T23:17:56 IST" name="jsPrompt" finished-at="2024-01-05T23:17:58 IST" duration-ms="1628" status="PASS">
+        <test-method signature="simpleFormTest()[pri:0, instance:Test.SimpleFormTest@34b9f960]" started-at="2024-01-06T15:31:15 IST" name="simpleFormTest" finished-at="2024-01-06T15:31:17 IST" duration-ms="2548" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- simpleFormTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.SimpleFormTest@34b9f960]" started-at="2024-01-06T15:31:17 IST" name="closeTest" finished-at="2024-01-06T15:31:18 IST" duration-ms="500" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- Test.SimpleFormTest -->
+    </test> <!-- Simple form -->
+    <test started-at="2024-01-06T15:31:19 IST" name="Javascript prompt Alert Test" finished-at="2024-01-06T15:31:29 IST" duration-ms="10284">
+      <class name="Test.JavascriptPromptVerifyTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.JavascriptPromptVerifyTest@589da3f3]" started-at="2024-01-06T15:31:19 IST" name="setUp" finished-at="2024-01-06T15:31:26 IST" duration-ms="7664" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="jsPrompt()[pri:0, instance:Test.JavascriptPromptVerifyTest@589da3f3]" started-at="2024-01-06T15:31:26 IST" name="jsPrompt" finished-at="2024-01-06T15:31:29 IST" duration-ms="2122" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- jsPrompt -->
-        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.JavascriptPromptVerifyTest@589da3f3]" started-at="2024-01-05T23:17:58 IST" name="closeTest" finished-at="2024-01-05T23:17:58 IST" duration-ms="264" status="PASS">
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.JavascriptPromptVerifyTest@589da3f3]" started-at="2024-01-06T15:31:29 IST" name="closeTest" finished-at="2024-01-06T15:31:29 IST" duration-ms="493" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeTest -->
       </class> <!-- Test.JavascriptPromptVerifyTest -->
     </test> <!-- Javascript prompt Alert Test -->
-    <test started-at="2024-01-05T23:17:58 IST" name="Form Test" finished-at="2024-01-05T23:18:05 IST" duration-ms="6999">
-      <class name="Test.FormSubmitTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.FormSubmitTest@1cb346ea]" started-at="2024-01-05T23:17:58 IST" name="setUp" finished-at="2024-01-05T23:18:03 IST" duration-ms="4242" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="formSubmitTest()[pri:0, instance:Test.FormSubmitTest@1cb346ea]" started-at="2024-01-05T23:18:03 IST" name="formSubmitTest" finished-at="2024-01-05T23:18:05 IST" duration-ms="2481" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- formSubmitTest -->
-        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.FormSubmitTest@1cb346ea]" started-at="2024-01-05T23:18:05 IST" name="closeTest" finished-at="2024-01-05T23:18:05 IST" duration-ms="270" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeTest -->
-      </class> <!-- Test.FormSubmitTest -->
-    </test> <!-- Form Test -->
-    <test started-at="2024-01-05T23:18:06 IST" name="Form Error Test" finished-at="2024-01-05T23:18:12 IST" duration-ms="6520">
-      <class name="Test.SubmitFormErrorTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.SubmitFormErrorTest@e3c0e40]" started-at="2024-01-05T23:18:06 IST" name="setUp" finished-at="2024-01-05T23:18:09 IST" duration-ms="3937" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="formSubmitTest()[pri:0, instance:Test.SubmitFormErrorTest@e3c0e40]" started-at="2024-01-05T23:18:09 IST" name="formSubmitTest" finished-at="2024-01-05T23:18:12 IST" duration-ms="2275" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- formSubmitTest -->
-        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.SubmitFormErrorTest@e3c0e40]" started-at="2024-01-05T23:18:12 IST" name="closeTest" finished-at="2024-01-05T23:18:12 IST" duration-ms="296" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeTest -->
-      </class> <!-- Test.SubmitFormErrorTest -->
-    </test> <!-- Form Error Test -->
-    <test started-at="2024-01-05T23:18:12 IST" name="Radio button Test" finished-at="2024-01-05T23:18:18 IST" duration-ms="6237">
-      <class name="Test.RadioButtonTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.RadioButtonTest@479cbee5]" started-at="2024-01-05T23:18:12 IST" name="setUp" finished-at="2024-01-05T23:18:16 IST" duration-ms="4101" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="radioBtnTest()[pri:0, instance:Test.RadioButtonTest@479cbee5]" started-at="2024-01-05T23:18:16 IST" name="radioBtnTest" finished-at="2024-01-05T23:18:18 IST" duration-ms="1759" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- radioBtnTest -->
-        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.RadioButtonTest@479cbee5]" started-at="2024-01-05T23:18:18 IST" name="closeTest" finished-at="2024-01-05T23:18:18 IST" duration-ms="364" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeTest -->
-      </class> <!-- Test.RadioButtonTest -->
-    </test> <!-- Radio button Test -->
-    <test started-at="2024-01-05T23:17:41 IST" name="Facebook test" finished-at="2024-01-05T23:18:23 IST" duration-ms="42851">
+    <test started-at="2024-01-06T15:31:19 IST" name="Facebook test" finished-at="2024-01-06T15:31:33 IST" duration-ms="14506">
       <class name="Test.WindowPopUpTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.WindowPopUpTest@651aed93]" started-at="2024-01-05T23:17:41 IST" name="setUp" finished-at="2024-01-05T23:18:18 IST" duration-ms="37537" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.WindowPopUpTest@651aed93]" started-at="2024-01-06T15:31:19 IST" name="setUp" finished-at="2024-01-06T15:31:26 IST" duration-ms="7693" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -252,19 +87,19 @@ at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="windowPopUp()[pri:0, instance:Test.WindowPopUpTest@651aed93]" started-at="2024-01-05T23:18:18 IST" name="windowPopUp" finished-at="2024-01-05T23:18:23 IST" duration-ms="4910" status="PASS">
+        <test-method signature="windowPopUp()[pri:0, instance:Test.WindowPopUpTest@651aed93]" started-at="2024-01-06T15:31:26 IST" name="windowPopUp" finished-at="2024-01-06T15:31:33 IST" duration-ms="6098" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- windowPopUp -->
-        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.WindowPopUpTest@651aed93]" started-at="2024-01-05T23:18:23 IST" name="closeTest" finished-at="2024-01-05T23:18:23 IST" duration-ms="388" status="PASS">
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.WindowPopUpTest@651aed93]" started-at="2024-01-06T15:31:33 IST" name="closeTest" finished-at="2024-01-06T15:31:33 IST" duration-ms="568" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeTest -->
       </class> <!-- Test.WindowPopUpTest -->
     </test> <!-- Facebook test -->
-    <test started-at="2024-01-05T23:18:18 IST" name="Drag and Drop Test" finished-at="2024-01-05T23:18:30 IST" duration-ms="12001">
-      <class name="Test.DragAndDropTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.DragAndDropTest@1787bc24]" started-at="2024-01-05T23:18:18 IST" name="setUp" finished-at="2024-01-05T23:18:27 IST" duration-ms="8505" status="PASS">
+    <test started-at="2024-01-06T15:31:29 IST" name="Form Test" finished-at="2024-01-06T15:31:40 IST" duration-ms="10328">
+      <class name="Test.FormSubmitTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.FormSubmitTest@1cb346ea]" started-at="2024-01-06T15:31:29 IST" name="setUp" finished-at="2024-01-06T15:31:37 IST" duration-ms="7509" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -275,19 +110,88 @@ at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="dragAndDropTest()[pri:0, instance:Test.DragAndDropTest@1787bc24]" started-at="2024-01-05T23:18:27 IST" name="dragAndDropTest" finished-at="2024-01-05T23:18:30 IST" duration-ms="3120" status="PASS">
+        <test-method signature="formSubmitTest()[pri:0, instance:Test.FormSubmitTest@1cb346ea]" started-at="2024-01-06T15:31:37 IST" name="formSubmitTest" finished-at="2024-01-06T15:31:39 IST" duration-ms="2452" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- formSubmitTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.FormSubmitTest@1cb346ea]" started-at="2024-01-06T15:31:39 IST" name="closeTest" finished-at="2024-01-06T15:31:40 IST" duration-ms="364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- Test.FormSubmitTest -->
+    </test> <!-- Form Test -->
+    <test started-at="2024-01-06T15:31:33 IST" name="Form Error Test" finished-at="2024-01-06T15:31:44 IST" duration-ms="10439">
+      <class name="Test.SubmitFormErrorTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.SubmitFormErrorTest@e3c0e40]" started-at="2024-01-06T15:31:33 IST" name="setUp" finished-at="2024-01-06T15:31:41 IST" duration-ms="7716" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="formSubmitTest()[pri:0, instance:Test.SubmitFormErrorTest@e3c0e40]" started-at="2024-01-06T15:31:41 IST" name="formSubmitTest" finished-at="2024-01-06T15:31:43 IST" duration-ms="2472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- formSubmitTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.SubmitFormErrorTest@e3c0e40]" started-at="2024-01-06T15:31:43 IST" name="closeTest" finished-at="2024-01-06T15:31:44 IST" duration-ms="246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- Test.SubmitFormErrorTest -->
+    </test> <!-- Form Error Test -->
+    <test started-at="2024-01-06T15:31:40 IST" name="Radio button Test" finished-at="2024-01-06T15:31:49 IST" duration-ms="8924">
+      <class name="Test.RadioButtonTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.RadioButtonTest@479cbee5]" started-at="2024-01-06T15:31:40 IST" name="setUp" finished-at="2024-01-06T15:31:47 IST" duration-ms="7331" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="radioBtnTest()[pri:0, instance:Test.RadioButtonTest@479cbee5]" started-at="2024-01-06T15:31:47 IST" name="radioBtnTest" finished-at="2024-01-06T15:31:48 IST" duration-ms="1339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- radioBtnTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.RadioButtonTest@479cbee5]" started-at="2024-01-06T15:31:48 IST" name="closeTest" finished-at="2024-01-06T15:31:49 IST" duration-ms="251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- Test.RadioButtonTest -->
+    </test> <!-- Radio button Test -->
+    <test started-at="2024-01-06T15:31:49 IST" name="Drag and Drop Test" finished-at="2024-01-06T15:31:58 IST" duration-ms="9797">
+      <class name="Test.DragAndDropTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.DragAndDropTest@26df6e3a]" started-at="2024-01-06T15:31:49 IST" name="setUp" finished-at="2024-01-06T15:31:56 IST" duration-ms="7064" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="dragAndDropTest()[pri:0, instance:Test.DragAndDropTest@26df6e3a]" started-at="2024-01-06T15:31:56 IST" name="dragAndDropTest" finished-at="2024-01-06T15:31:58 IST" duration-ms="2364" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dragAndDropTest -->
-        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.DragAndDropTest@1787bc24]" started-at="2024-01-05T23:18:30 IST" name="closeTest" finished-at="2024-01-05T23:18:30 IST" duration-ms="372" status="PASS">
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.DragAndDropTest@26df6e3a]" started-at="2024-01-06T15:31:58 IST" name="closeTest" finished-at="2024-01-06T15:31:58 IST" duration-ms="364" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeTest -->
       </class> <!-- Test.DragAndDropTest -->
     </test> <!-- Drag and Drop Test -->
-    <test started-at="2024-01-05T23:18:24 IST" name="Table Verify Test" finished-at="2024-01-05T23:18:33 IST" duration-ms="9261">
-      <class name="Test.TableDataVerifyTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.TableDataVerifyTest@6986852]" started-at="2024-01-05T23:18:24 IST" name="setUp" finished-at="2024-01-05T23:18:29 IST" duration-ms="5735" status="PASS">
+    <test started-at="2024-01-06T15:31:44 IST" name="JQuery Test" finished-at="2024-01-06T15:31:59 IST" duration-ms="14996">
+      <class name="Test.JQueryTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.JQueryTest@1787bc24]" started-at="2024-01-06T15:31:44 IST" name="setUp" finished-at="2024-01-06T15:31:57 IST" duration-ms="12867" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -298,7 +202,30 @@ at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="tableVerify(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Test.TableDataVerifyTest@6986852]" started-at="2024-01-05T23:18:31 IST" name="tableVerify" data-provider="employeeDetails" finished-at="2024-01-05T23:18:32 IST" duration-ms="1274" status="PASS">
+        <test-method signature="jQueryTest()[pri:0, instance:Test.JQueryTest@1787bc24]" started-at="2024-01-06T15:31:57 IST" name="jQueryTest" finished-at="2024-01-06T15:31:58 IST" duration-ms="1411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jQueryTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.JQueryTest@1787bc24]" started-at="2024-01-06T15:31:58 IST" name="closeTest" finished-at="2024-01-06T15:31:59 IST" duration-ms="715" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- Test.JQueryTest -->
+    </test> <!-- JQuery Test -->
+    <test started-at="2024-01-06T15:31:59 IST" name="Table Verify Test" finished-at="2024-01-06T15:32:08 IST" duration-ms="9369">
+      <class name="Test.TableDataVerifyTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:Test.TableDataVerifyTest@658c5a19]" started-at="2024-01-06T15:31:59 IST" name="setUp" finished-at="2024-01-06T15:32:05 IST" duration-ms="6213" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tableVerify(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Test.TableDataVerifyTest@658c5a19]" started-at="2024-01-06T15:32:06 IST" name="tableVerify" data-provider="employeeDetails" finished-at="2024-01-06T15:32:08 IST" duration-ms="1597" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -329,7 +256,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tableVerify -->
-        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.TableDataVerifyTest@6986852]" started-at="2024-01-05T23:18:32 IST" name="closeTest" finished-at="2024-01-05T23:18:33 IST" duration-ms="369" status="PASS">
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:Test.TableDataVerifyTest@658c5a19]" started-at="2024-01-06T15:32:08 IST" name="closeTest" finished-at="2024-01-06T15:32:08 IST" duration-ms="365" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeTest -->
