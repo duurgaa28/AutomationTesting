@@ -334,7 +334,7 @@
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Simple form --&gt;
   &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Input Test&quot; verbose=&quot;0&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Test.InputTest&quot;/&gt;
     &lt;/classes&gt;
@@ -455,48 +455,48 @@ data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'windowPopUp')
 data.setCell(0, 2, 'Test.WindowPopUpTest')
-data.setCell(0, 3, 6098);
+data.setCell(0, 3, 5323);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'inputTest')
 data.setCell(1, 2, 'Test.InputTest')
-data.setCell(1, 3, 2917);
+data.setCell(1, 3, 2750);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'simpleFormTest')
-data.setCell(2, 2, 'Test.SimpleFormTest')
-data.setCell(2, 3, 2548);
+data.setCell(2, 1, 'formSubmitTest')
+data.setCell(2, 2, 'Test.FormSubmitTest')
+data.setCell(2, 3, 2480);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'formSubmitTest')
-data.setCell(3, 2, 'Test.SubmitFormErrorTest')
-data.setCell(3, 3, 2472);
+data.setCell(3, 1, 'simpleFormTest')
+data.setCell(3, 2, 'Test.SimpleFormTest')
+data.setCell(3, 3, 2369);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'formSubmitTest')
-data.setCell(4, 2, 'Test.FormSubmitTest')
-data.setCell(4, 3, 2452);
+data.setCell(4, 2, 'Test.SubmitFormErrorTest')
+data.setCell(4, 3, 2250);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'dragAndDropTest')
-data.setCell(5, 2, 'Test.DragAndDropTest')
-data.setCell(5, 3, 2364);
+data.setCell(5, 1, 'jsPrompt')
+data.setCell(5, 2, 'Test.JavascriptPromptVerifyTest')
+data.setCell(5, 3, 1716);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'jsPrompt')
-data.setCell(6, 2, 'Test.JavascriptPromptVerifyTest')
-data.setCell(6, 3, 2122);
+data.setCell(6, 1, 'tableVerify')
+data.setCell(6, 2, 'Test.TableDataVerifyTest')
+data.setCell(6, 3, 1612);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'tableVerify')
-data.setCell(7, 2, 'Test.TableDataVerifyTest')
-data.setCell(7, 3, 1597);
+data.setCell(7, 1, 'radioBtnTest')
+data.setCell(7, 2, 'Test.RadioButtonTest')
+data.setCell(7, 3, 1609);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'jQueryTest')
-data.setCell(8, 2, 'Test.JQueryTest')
-data.setCell(8, 3, 1411);
+data.setCell(8, 1, 'dragAndDropTest')
+data.setCell(8, 2, 'Test.DragAndDropTest')
+data.setCell(8, 3, 1587);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'radioBtnTest')
-data.setCell(9, 2, 'Test.RadioButtonTest')
-data.setCell(9, 3, 1339);
+data.setCell(9, 1, 'jQueryTest')
+data.setCell(9, 2, 'Test.JQueryTest')
+data.setCell(9, 3, 1264);
 window.suiteTableData['Framework1Suite']= { tableData: data, tableDiv: 'times-div-Framework1Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Framework1Suite">
               </div> <!-- times-div-Framework1Suite -->
             </div> <!-- times-div -->
@@ -531,177 +531,183 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Test.InputTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-name">setUp(firefox)</span>
+                <span class="method-start">2 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">inputTest</span>
-                <span class="method-start">10802 ms</span>
-              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.SimpleFormTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">simpleFormTest</span>
-                <span class="method-start">11307 ms</span>
+                <span class="method-start">8686 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Test.InputTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">closeTest</span>
-                <span class="method-start">13736 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Test.SimpleFormTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">closeTest</span>
-                <span class="method-start">13857 ms</span>
+                <span class="method-start">11069 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.WindowPopUpTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">15210 ms</span>
+                <span class="method-start">12351 ms</span>
               </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Test.InputTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">inputTest</span>
+                <span class="method-start">12785 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">closeTest</span>
+                <span class="method-start">15537 ms</span>
+              </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.JavascriptPromptVerifyTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">15212 ms</span>
+                <span class="method-start">16962 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">jsPrompt</span>
-                <span class="method-start">22878 ms</span>
-              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.WindowPopUpTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">windowPopUp</span>
-                <span class="method-start">22903 ms</span>
+                <span class="method-start">19501 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.JavascriptPromptVerifyTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">jsPrompt</span>
+                <span class="method-start">22054 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeTest</span>
-                <span class="method-start">25001 ms</span>
+                <span class="method-start">23772 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.FormSubmitTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">25643 ms</span>
+                <span class="method-start">24710 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.WindowPopUpTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">closeTest</span>
-                <span class="method-start">29002 ms</span>
+                <span class="method-start">24827 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.SubmitFormErrorTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">29674 ms</span>
+                <span class="method-start">26594 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.FormSubmitTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">formSubmitTest</span>
-                <span class="method-start">33154 ms</span>
+                <span class="method-start">31660 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Test.SubmitFormErrorTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">formSubmitTest</span>
+                <span class="method-start">32933 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Test.FormSubmitTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">closeTest</span>
-                <span class="method-start">35607 ms</span>
+                <span class="method-start">34140 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.RadioButtonTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">36070 ms</span>
+                <span class="method-start">34791 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.SubmitFormErrorTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">formSubmitTest</span>
-                <span class="method-start">37390 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeTest</span>
-                <span class="method-start">39865 ms</span>
+                <span class="method-start">35185 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.JQueryTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">40175 ms</span>
+                <span class="method-start">36936 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.RadioButtonTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">radioBtnTest</span>
-                <span class="method-start">43403 ms</span>
+                <span class="method-start">40145 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeTest</span>
-                <span class="method-start">44743 ms</span>
+                <span class="method-start">41758 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.DragAndDropTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">45061 ms</span>
+                <span class="method-start">42062 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">dragAndDropTest</span>
-                <span class="method-start">52128 ms</span>
-              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.JQueryTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">jQueryTest</span>
-                <span class="method-start">53043 ms</span>
+                <span class="method-start">43057 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeTest</span>
-                <span class="method-start">54455 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Test.DragAndDropTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">closeTest</span>
-                <span class="method-start">54492 ms</span>
+                <span class="method-start">44322 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.TableDataVerifyTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">54988 ms</span>
+                <span class="method-start">44708 ms</span>
               </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Test.DragAndDropTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">tableVerify(Junior Technical Author, San Francisco, 66, 2009/01/12, $86,000)</span>
-                <span class="method-start">62392 ms</span>
+                <span class="method-name">dragAndDropTest</span>
+                <span class="method-start">47063 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeTest</span>
-                <span class="method-start">63991 ms</span>
+                <span class="method-start">48653 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Test.TableDataVerifyTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">tableVerify(Junior Technical Author, San Francisco, 66, 2009/01/12, $86,000)</span>
+                <span class="method-start">50003 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">closeTest</span>
+                <span class="method-start">51617 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

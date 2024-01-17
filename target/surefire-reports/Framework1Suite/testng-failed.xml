@@ -4,16 +4,16 @@
   <listeners>
     <listener class-name="util.ReportUtil"/>
   </listeners>
-  <test thread-count="2" parallel="classes" name="Input Test(failed)" verbose="0">
-    <parameter name="browser" value="firefox"/>
+  <test thread-count="2" parallel="tests" name="Form Error Test(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="Test.InputTest">
+      <class name="Test.SubmitFormErrorTest">
         <methods>
           <include name="setUp"/>
+          <include name="formSubmitTest"/>
           <include name="closeTest"/>
-          <include name="inputTest"/>
         </methods>
-      </class> <!-- Test.InputTest -->
+      </class> <!-- Test.SubmitFormErrorTest -->
     </classes>
-  </test> <!-- Input Test(failed) -->
+  </test> <!-- Form Error Test(failed) -->
 </suite> <!-- Failed suite [Framework1Suite] -->
